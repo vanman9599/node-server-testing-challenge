@@ -2,15 +2,15 @@
   "name": "node-server-testing",
   "version": "1.0.0",
   "description": "Node Server Testing Challenge",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "cross-env DB_ENV=testing jest --watch",
-    "server": "nodemon index.js", 
+    "server": "nodemon index.js",
     "start": "node index.js"
-
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "verbose": true
   },
   "repository": {
     "type": "git",
@@ -30,8 +30,13 @@
     "supertest": "^4.0.2"
   },
   "dependencies": {
+    "bcrypt": "^3.0.6",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
+    "helmet": "^3.20.0",
+    "jsonwebtoken": "^8.5.1",
     "knex": "^0.19.1",
     "sqlite3": "^4.0.9"
   }
